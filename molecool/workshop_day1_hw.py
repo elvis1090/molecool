@@ -2,8 +2,8 @@ import molecool as mc # our package
 import os # file paths
 
 benzene_file_path = os.path.join('data', 'xyz', 'benzene.xyz')
-benzene_symbols, benzene_coords = open_xyz(benzene_file_path)
-benzene_bonds = build_bond_list(benzene_coords)
+benzene_symbols, benzene_coords = mc.open_xyz(benzene_file_path)
+benzene_bonds = mc.build_bond_list(benzene_coords)
 
 print(benzene_bonds)
 
@@ -16,8 +16,8 @@ avg_bl = avg_sum/len(benzene_bonds)
 
 print('The average bond length is {}'.format(avg_bl))
 
-benzene_fig = draw_molecule(benzene_coords, benzene_symbols, draw_bonds=benzene_bonds)
+benzene_fig = mc.draw_molecule(benzene_coords, benzene_symbols, draw_bonds=benzene_bonds)
 
 plt.savefig('benzene.png', dpi=300)
 
-bond_histogram(benzene_bonds, save_location="benzene_histogram.png")
+mc.bond_histogram(benzene_bonds, save_location="benzene_histogram.png")
