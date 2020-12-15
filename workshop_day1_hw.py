@@ -2,7 +2,7 @@ import molecool as mc # our package
 import os # file paths
 import matplotlib.pyplot as plt
 
-benzene_file_path = os.path.join('data', 'xyz', 'benzene.xyz')
+benzene_file_path = os.path.join('D:\\Notre-Dame\\Classes_Research\\conferences_summer_school\\molssi-best-practices\\starting_material\\data\\xyz','benzene.xyz')
 benzene_symbols, benzene_coords = mc.open_xyz(benzene_file_path)
 benzene_bonds = mc.build_bond_list(benzene_coords)
 
