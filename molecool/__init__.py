@@ -1,10 +1,10 @@
 """
 molecool
-A Python package for analyzing and visualizing xyz files. 
+A Python package for analyzing and visualizing xyz files.
 """
 
 # Add imports here
-from .functions import canvas
+from .functions import *
 
 # Handle versioneer
 from ._version import get_versions

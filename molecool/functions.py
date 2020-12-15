@@ -34,8 +34,6 @@ import matplotlib.pyplot as plt
 
 from mpl_toolkits.mplot3d import Axes3D
 
-%matplotlib notebook
-
 def calculate_distance(rA, rB):
     # This function calculates the distance between two points given as numpy arrays.
     d=(rA-rB)
@@ -69,7 +67,6 @@ atomic_weights = {
 
 
 def open_xyz(file_location):
-
     # Open an xyz file and return symbols and coordinates.
     xyz_file = np.genfromtxt(fname=file_location, skip_header=2, dtype='unicode')
     symbols = xyz_file[:,0]
